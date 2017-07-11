@@ -4,7 +4,65 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-/*Side Navigation Bar */
+<!-- Start css part of loading dialog code-->	
+body { margin: 0; padding: 0; width: 100%; font-family: arial; } 
+.loadingDialog { clear: both; position: relative; margin: 5% auto; top: 5%;  
+
+.loading, .loadingShadow { position: absolute; left: 0; right: 0; height: 2em; margin: 0 auto; font-size: 1em; text-align: center; text-transform: uppercase; } 
+
+.loading { color: #02bebb; z-index: 10; }
+.loadingShadow { color: #000; z-index: 5; }
+
+.letter, .ellipse { position: relative; padding-bottom:2em; display: inline-block; vertical-align: middle; width: .9em; }
+.ellipse { width: .3em; }
+.loading .letter, .loading .ellipse {
+  animation-name: loadMotion;
+  animation-duration: 996ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+.loadingShadow .letter, .loadingShadow .ellipse { text-shadow: 0 .15em 0 rgba(0, 0, 0, .5 );
+  animation-name: loadShadow;
+  animation-duration: 996ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+.letter01 { animation-delay: 0; }
+.letter02 { animation-delay: 100ms; }
+.letter03 { animation-delay: 200ms; }
+.letter04 { animation-delay: 300ms; }
+.letter05 { animation-delay: 400ms; }
+.letter06 { animation-delay: 500ms; }
+.letter07 { animation-delay: 600ms; }
+.letter08 { animation-delay: 700ms; }
+.letter09 { animation-delay: 800ms; }
+.letter10 { animation-delay: 900ms; }
+}
+@keyframes loadMotion {
+  from {
+    bottom: 0em;
+  }  
+  to {
+   bottom: .5em;
+  }
+}
+
+@keyframes loadShadow {
+  from {
+    text-shadow: 0 .15em 0 rgba(0, 0, 0, .5 );
+  }  
+  to {
+    text-shadow: 0 0 .25em rgba(0, 0, 0, 1 );
+  }
+}
+<!-- End -->
+<!-- Side Navigation Bar -->
 	body {
     font-family: "Lucida Grande", sans-serif;
 }
@@ -251,6 +309,38 @@ function closeNav() {
 </body>
 /* Side End */	
 <body>
+
+
+<!-- Loading Dialog Code from https://codepen.io/Tristan-zimmerman/pen/lFazB ↓ -->
+
+<div class="loadingDialog">
+<h2 id="loading" class="loading">
+  <span class="letter letter01">P</span>
+  <span class="letter letter02">r</span>
+  <span class="letter letter03">o</span>
+  <span class="letter letter04">j</span>
+  <span class="letter letter05">e</span>
+  <span class="letter letter06">c</span>
+  <span class="letter letter07">t</span>
+  <span class="ellipse letter08">s</span>
+  <span class="ellipse letter09">.</span>
+  <span class="ellipse letter10">.</span>
+</h2>
+
+<h2 id="loadingShadow" class="loadingShadow">
+  <span class="letter letter01">P</span>
+  <span class="letter letter02">r</span>
+  <span class="letter letter03">o</span>
+  <span class="letter letter04">j</span>
+  <span class="letter letter05">e</span>
+  <span class="letter letter06">c</span>
+  <span class="letter letter07">t</span>
+  <span class="ellipse letter08">s</span>
+  <span class="ellipse letter09">.</span>
+  <span class="ellipse letter10">.</span>
+</h2>
+</div>
+<!-- End -->
 
 <div style="background-color:black;color:white;padding:20px;">
 <body style="background-color:lavendar;">
