@@ -4,6 +4,7 @@
 <title>Janice Liu | Home </title>
 </head>
 <style>
+  <!--button -->
   .button {
   display: inline-block;
   border-radius: 4px;
@@ -43,10 +44,64 @@
   opacity: 1;
   right: 0;
 }
+  <!--end -->
+  .carousel .carousel-item {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel .carousel-item:first-of-type {
+    background-image: url("http://eskipaper.com/images/white-macro-hd-1.jpg");
+}
+
+.carousel .carousel-item:nth-of-type(2) {
+    background-image: url("http://s9.favim.com/orig/130806/flower-flowers-photography-pink-Favim.com-833641.jpg");
+}
+
+.carousel .carousel-item:last-of-type {
+    background-image: url("https://4.bp.blogspot.com/-pxMLcrD3N7I/UjAMNkqM43I/AAAAAAAAABQ/2-etadUS_48/s640/flowers.jpg");
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+}
+
 </style>
+<script>
+  $('.carousel').carousel();
+
+// Em An
+// 13-7-2017
+// https://codepen.io/collection/AGNJNB/
+</script>
 <body>
   <button class="button" style="vertical-align:middle"><span>About Me </span></button>
 </body>
+ <body>
+   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active"></div>
+        <div id="target" class="carousel-item"></div>
+        <div class="carousel-item"></div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+  </body>
 <footer>
 <hr>
 <b>Contact Me</b>
